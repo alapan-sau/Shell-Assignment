@@ -1,0 +1,3 @@
+xargs -n 1 < to_delete.txt | sed 's/$/.txt/g' | sed 's!^!./delete/!' | xargs /bin/rm
+
+find . -name "*$1*" -exec basename {} ';' | sort -r
